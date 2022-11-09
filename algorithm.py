@@ -1,9 +1,8 @@
-# Searshing
+# (Searshing)
 
 # ===> Linear Search
 # worst case ---> O(n) = first element
 # best case  ---> O(1) = last element
-from genericpath import samestat
 
 
 def linearSearch(arr, target):
@@ -41,8 +40,7 @@ def binarySearch(list, target):
 
 print(binarySearch([1, 3, 5, 7, 9], 3))
 
-
-# Sorting
+# (Sorting)
 
 print("#" * 30)
 # Bubbl Sort
@@ -72,3 +70,19 @@ def slectionSort(arr):
 
 
 print(slectionSort([3, 8, 5, 2]))
+
+print("#" * 30)
+# Quick Sort
+
+
+def quickSort(array):
+    if len(array) < 2:
+        return array
+    else:
+        pivot = array[0]
+        less = [i for i in array[1:] if i <= pivot]
+        greater = [i for i in array[1:] if i > pivot]
+        return quickSort(less) + [pivot] + quickSort(greater)
+
+
+print(quickSort([10, 5, 2, 3]))
